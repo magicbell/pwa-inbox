@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#6E56CF" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <title><!--title--></title>
+    <meta name="description" content="PWA Inbox — a Progressive Web Application powered by MagicBell" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/ios/180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/ios/32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/ios/16.png" />
+
+    <!--canonical-->
+    <!--manifest-->
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="<!--og-title-->" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="PWA Inbox — a Progressive Web Application powered by MagicBell" />
+    <meta property="og:image:alt" content="MagicBell Notification Inbox" />
+    <!--og-url-->
+    <!--og-image-->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@magicbell_io" />
+    <meta name="twitter:title" content="<!--og-title-->" />
+    <meta name="twitter:description" content="PWA Inbox — a Progressive Web Application powered by MagicBell" />
+    <!--twitter-image-->
+
+    <script type="module" src="https://esm.sh/@khmyznikov/pwa-install"></script>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <script>document.body.className=/iPad|iPhone|iPod|Android/.test(navigator.userAgent)?'mobile':'desktop'</script>
+    <div id="app"><!--ssr--></div>
+    <script type="module" src="/src/client.tsx"></script>
+  </body>
+</html>

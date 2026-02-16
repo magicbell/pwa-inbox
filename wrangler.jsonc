@@ -1,0 +1,14 @@
+{
+  "name": "installable-inbox",
+  "compatibility_date": "2025-01-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "src/index.tsx",
+  "assets": {
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "not_found_handling": "none"
+  },
+  "vars": {
+    "API_URL": "https://api.magicbell.com/v2"
+  }
+}

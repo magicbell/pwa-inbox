@@ -1,0 +1,30 @@
+{
+  "name": "preact-inbox",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "dependencies": {
+    "@magicbell/preact": "^1.11.0",
+    "hono": "^4.11.8",
+    "jose": "^6.1.3",
+    "nanoid": "^5.1.6",
+    "posthog-js": "^1.343.2",
+    "preact": "^10.25.0",
+    "preact-render-to-string": "^6.5.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.0.0",
+    "@cloudflare/workers-types": "^4.20250109.0",
+    "@preact/preset-vite": "^2.9.0",
+    "@tailwindcss/vite": "^4.1.18",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0",
+    "wrangler": "^3.100.0"
+  }
+}

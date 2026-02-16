@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+:root {
+  --app-primary: #6E56CF;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
