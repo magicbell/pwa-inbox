@@ -12,7 +12,7 @@ Note that this also works on iOS. The ability to receive push notifications from
 
 - **Send things to yourself** — Use your inbox URL as a personal notification endpoint. Fire off a quick `curl` or HTTP POST from anywhere to send yourself a reminder, link, or note.
 - **Final step in an automated workflow** — Add your inbox as the last action in a Zapier zap, Make scenario, or any automation pipeline. Get a push notification when your workflow completes.
-- **Let others send things to you** — Share your inbox URL so colleagues, friends, or services can push notifications to you without needing your email or phone number.
+- **Let others send things to you** — Each inbox has a separate write-only URL that can be safely shared, just like an email address. It lets others push notifications to you without granting any read access to your inbox contents.
 - **Throwaway notification channels** — Spin up a new inbox for a specific topic or event. PWA technology makes it trivially easy to install a dedicated app for each notification channel — and just as easy to delete when you no longer need it. Super lightweight compared to native apps.
 - **One app per topic** — Instead of a single app with a "notification settings" screen, create a dedicated PWA for each topic you care about. Subscribe only to what matters, uninstall what doesn't. ([via @Matt0xley](https://x.com/Matt0xley/status/2023406023873372314))
 
