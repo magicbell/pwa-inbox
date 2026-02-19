@@ -1,3 +1,5 @@
+![Sharing Banner](public/app-screenshot.png)
+
 # PWA Inbox
 
 A Progressive Web Application that provides a real-time notification inbox, powered by [MagicBell](https://www.magicbell.com/).
