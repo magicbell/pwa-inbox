@@ -128,7 +128,7 @@ export function App({ id, url, token, apiUrl, writeId, serverTime }: AppProps) {
         icon="/icons/ios/180.png"
       />
       <footer class="flex items-center justify-between text-xs text-gray-400 px-4 py-4 mx-auto w-full">
-        <div></div>
+        <span></span>
         <div class="space-x-3">
           <a
             href="https://www.magicbell.com/privacy-policy"
