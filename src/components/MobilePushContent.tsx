@@ -1,5 +1,6 @@
 import type { ComponentChildren } from "preact"
 import { SendTestButton } from "./SendTestButton"
+import { GITHUB_URL } from "../lib/constants"
 
 type WebPushStatus =
   | "idle"
@@ -36,7 +37,9 @@ function StatusPanel({
 export function MobilePushContent({ status, sendUrl, children }: Props) {
   return (
     <div class="flex flex-col items-center grow px-4 pb-4">
-      <div class={`relative w-full flex-1 overflow-hidden ${status === "idle" || status === "loading" || status === "success" ? "min-h-48" : ""}`}>
+      <div
+        class={`relative w-full flex-1 overflow-hidden ${status === "idle" || status === "loading" || status === "success" ? "min-h-48" : ""}`}
+      >
         <StatusPanel visible={status === "idle"}>
           <div class="text-4xl mb-3">🔔</div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">
@@ -74,10 +77,21 @@ export function MobilePushContent({ status, sendUrl, children }: Props) {
       <div class="w-full shrink-0 flex justify-center">{children}</div>
       <hr class="w-full border-t border-gray-200 my-5" />
       <div class="w-full">
-        <SendTestButton
-          sendUrl={sendUrl}
-          pulse={status === "success"}
-        />
+        <SendTestButton sendUrl={sendUrl} pulse={status === "success"} />
+      </div>
+      <div class="flex justify-end px-4 py-3 shrink-0">
+        <a
+          href={GITHUB_URL}
+          class="hover:opacity-80"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/github-mark.svg"
+            alt="GitHub"
+            class="w-5 h-5 opacity-40 hover:opacity-70"
+          />
+        </a>
       </div>
     </div>
   )

@@ -1,6 +1,7 @@
 import { useState, useMemo } from "preact/hooks"
 import { useTokenStatus } from "../lib/use-token-status"
 import { curlSnippet } from "../lib/echo"
+import { GITHUB_URL } from "../lib/constants"
 
 function Step({
   label,
@@ -125,6 +126,17 @@ export function DesktopDialogContent({ url, sendUrl, token, apiUrl }: Props) {
             web form
           </a>{" "}
           to compose your request.
+        </p>
+        <p class="mt-3 text-xs text-gray-400">
+          Like this project?{" "}
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener"
+            class="text-(--app-primary) hover:underline"
+          >
+            Star us on GitHub
+          </a>
         </p>
       </div>
     </div>

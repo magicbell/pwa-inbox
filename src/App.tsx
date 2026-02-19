@@ -7,6 +7,7 @@ import { DesktopDialogContent } from "./components/DesktopDialogContent"
 import { SendTestButton } from "./components/SendTestButton"
 import { PwaInstall } from "./components/PwaInstall"
 import * as device from "./lib/device"
+import { GITHUB_URL } from "./lib/constants"
 
 type WebPushStatus =
   | "idle"
@@ -103,7 +104,12 @@ export function App({ id, url, token, apiUrl, writeId, serverTime }: AppProps) {
             {webPushButton}
           </MobilePushContent>
         ) : (
-          <DesktopDialogContent url={url} sendUrl={sendUrl} token={token} apiUrl={apiUrl} />
+          <DesktopDialogContent
+            url={url}
+            sendUrl={sendUrl}
+            token={token}
+            apiUrl={apiUrl}
+          />
         )}
       </Dialog>
       {!isMobile && (
@@ -121,24 +127,39 @@ export function App({ id, url, token, apiUrl, writeId, serverTime }: AppProps) {
         manifestUrl={`/${id}/manifest.json`}
         icon="/icons/ios/180.png"
       />
-      <footer class="text-center text-xs text-gray-400 py-4 space-x-3">
+      <footer class="flex items-center justify-between text-xs text-gray-400 px-4 py-4 mx-auto w-full">
+        <div></div>
+        <div class="space-x-3">
+          <a
+            href="https://www.magicbell.com/privacy-policy"
+            class="hover:text-gray-600"
+          >
+            Privacy
+          </a>
+          <a
+            href="https://www.magicbell.com/cookie-policy"
+            class="hover:text-gray-600"
+          >
+            Cookies
+          </a>
+          <a
+            href="https://www.magicbell.com/terms-and-conditions"
+            class="hover:text-gray-600"
+          >
+            Terms
+          </a>
+        </div>
         <a
-          href="https://www.magicbell.com/privacy-policy"
-          class="hover:text-gray-600"
+          href={GITHUB_URL}
+          target="_blank"
+          rel="noopener"
+          class="hover:opacity-80"
         >
-          Privacy
-        </a>
-        <a
-          href="https://www.magicbell.com/cookie-policy"
-          class="hover:text-gray-600"
-        >
-          Cookies
-        </a>
-        <a
-          href="https://www.magicbell.com/terms-and-conditions"
-          class="hover:text-gray-600"
-        >
-          Terms
+          <img
+            src="/github-mark.svg"
+            alt="GitHub"
+            class="w-5 h-5 opacity-40 hover:opacity-70"
+          />
         </a>
       </footer>
     </MagicBellProvider>
