@@ -18,7 +18,7 @@ Note that this also works on iOS. The ability to receive push notifications from
 
 <div align="center">
   <video src="public/noti_received2_sm.mp4" width="315" autoplay loop muted playsinline></video>
-  <p><a href="https://youtube.com/shorts/fLPRCH44eUs">Watch the full demo on YouTube</a></p>
+  <p><a href="https://www.youtube.com/shorts/fLPRCH44eUs">Watch the full demo on YouTube</a></p>
 </div>
 
 ## Why a PWA?
